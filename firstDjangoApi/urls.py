@@ -18,11 +18,11 @@ from xml.etree.ElementInclude import include
 from django.contrib import admin
 from django.urls import path
 from webapp import views
-from django.conf.urls import url,include
+# from django.conf.urls import url,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('employee/', views.emplyoeeList,name='webapp'),
-    path('empTest/', include('webapp.urls'))
+    path('employee/', views.emplyoeeList.as_view() ,name='webapp'),
+    # path('empTest/', include('webapp.urls'))
 
 ]

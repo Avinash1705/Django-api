@@ -1,6 +1,8 @@
 from dataclasses import field, fields
 from rest_framework import serializers
-from rest_framework import emplyoees
+
+from webapp.models import emplyoees
+
 
 class employeesSerializer(serializers.ModelSerializer):
 
@@ -11,5 +13,5 @@ class employeesSerializer(serializers.ModelSerializer):
     #     verbose_name_plural = 'ModelNames'
     class Meta:
         model = emplyoees
-        # fields = ('firstname','lastname')
-        fields = '_all_'
+        fields = ('firstname','lastname')
+        # fields = '_all_' 

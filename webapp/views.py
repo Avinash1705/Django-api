@@ -13,5 +13,5 @@ class emplyoeeList(APIView):
         serializer = employeesSerializer(emplyoees1,many =TRUE)
         return  Response(serializer.data)
 
-    def post(self):
-        pass 
+    # def post(self):
+    #     pass 
